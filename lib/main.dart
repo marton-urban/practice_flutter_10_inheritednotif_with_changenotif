@@ -1,3 +1,5 @@
+// with InheritedNotifier, there is no need for ListenableBuilder
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'model/core_state.dart';
