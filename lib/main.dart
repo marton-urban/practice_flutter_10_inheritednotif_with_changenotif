@@ -13,7 +13,7 @@ Future main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  runApp(StateInheritedNotifier(state: CoreState(), child: const MyApp()));
+  runApp(StateInheritedNotifier(notifier: CoreState(), child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
