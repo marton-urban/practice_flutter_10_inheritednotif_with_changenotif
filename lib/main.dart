@@ -54,12 +54,9 @@ class MainPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ListenableBuilder(
-              listenable: StateInheritedNotifier.of(context),
-              builder: (BuildContext context, Widget? child) => Text(
-                '${StateInheritedNotifier.of(context).counter}',
-                style: const TextStyle(fontSize: 100),
-              ),
+            Text(
+              '${StateInheritedNotifier.of(context).counter}',
+              style: const TextStyle(fontSize: 100),
             ),
             const SizedBox(height: 47),
             ButtonWidget(
