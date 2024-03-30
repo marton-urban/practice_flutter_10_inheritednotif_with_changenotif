@@ -13,6 +13,17 @@ class StateInheritedNotifier extends InheritedNotifier<ChangeNotifier> {
       .dependOnInheritedWidgetOfExactType<StateInheritedNotifier>()!
       .notifier as CoreState;
 
+  // you can set listen = false in widgets that only need the data, but no updates
+  // static CoreState of(BuildContext context, {listen = true}) {
+  //   return listen
+  //       ? context
+  //           .dependOnInheritedWidgetOfExactType<StateInheritedNotifier>()!
+  //           .notifier as CoreState
+  //       : context
+  //           .findAncestorWidgetOfExactType<StateInheritedNotifier>()!
+  //           .notifier as CoreState;
+  // }
+
   // no need to override as it is already implemented in super
   // and is NOT used in this example anyway (notifier itself is never changed)
   // @override
