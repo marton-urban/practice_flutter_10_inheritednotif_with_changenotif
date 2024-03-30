@@ -24,18 +24,16 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) => ListenableBuilder(
-      listenable: StateInheritedNotifier.of(context),
-      builder: (BuildContext context, Widget? child) => MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: title,
-            theme: ThemeData(
-              scaffoldBackgroundColor:
-                  StateInheritedNotifier.of(context).backgroundColor,
-              primaryColor: Colors.white,
-            ),
-            home: const MainPage(title: title),
-          ));
+  Widget build(BuildContext context) => MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: title,
+        theme: ThemeData(
+          scaffoldBackgroundColor:
+              StateInheritedNotifier.of(context).backgroundColor,
+          primaryColor: Colors.white,
+        ),
+        home: const MainPage(title: title),
+      );
 }
 
 class MainPage extends StatelessWidget {
