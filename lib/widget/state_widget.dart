@@ -25,7 +25,10 @@ class StateInheritedNotifier extends InheritedNotifier<ChangeNotifier> {
   // }
 
   // no need to override as it is already implemented in super
-  // and is NOT used in this example anyway (notifier itself is never changed)
+  // and is NOT used in this example anyway, because
+  // notifier (which is a CoreState object) itself is never renewed,
+  // only its fields are changed
+  // so oldWidget.notifier == notifier in this example at all times
   // @override
   // bool updateShouldNotify(StateInheritedNotifier oldWidget) =>
   //     oldWidget.notifier != notifier;
