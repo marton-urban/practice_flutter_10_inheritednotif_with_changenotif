@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import '/model/core_state.dart';
 
-class StateInheritedNotifier extends InheritedNotifier<ChangeNotifier> {
+class StateInheritedNotifier extends InheritedNotifier<CoreState> {
   const StateInheritedNotifier({
     super.key,
     required super.child,
@@ -11,7 +11,7 @@ class StateInheritedNotifier extends InheritedNotifier<ChangeNotifier> {
 
   static CoreState of(BuildContext context) => context
       .dependOnInheritedWidgetOfExactType<StateInheritedNotifier>()!
-      .notifier as CoreState;
+      .notifier!;
 
   // you can set listen = false in widgets that only need the data, but no updates
   // static CoreState of(BuildContext context, {listen = true}) {
