@@ -25,7 +25,7 @@ class CoreState with ChangeNotifier {
   }
 
   void setCounter(int counter) {
-    if (_backgroundColor != backgroundColor) {
+    if (_counter != counter) {
       _counter = counter;
       notifyListeners();
     }
